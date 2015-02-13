@@ -47,6 +47,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bbf-Qo-l6E" firstAttribute="leading" secondItem="VZ8-jh-fUb" secondAttribute="leadingMargin" constant="-6" id="2ft-Tc-BMy"/>
                             <constraint firstItem="bbf-Qo-l6E" firstAttribute="top" secondItem="seI-ss-JMK" secondAttribute="bottom" constant="8" id="2h0-So-ePh"/>
@@ -61,6 +62,9 @@
                             <constraint firstItem="seI-ss-JMK" firstAttribute="leading" secondItem="bbf-Qo-l6E" secondAttribute="leading" id="re3-eW-QaZ"/>
                             <constraint firstItem="WIp-ny-Qdz" firstAttribute="top" secondItem="A2h-zB-EUa" secondAttribute="bottom" constant="260" id="vFc-2b-o3d"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ulc-ih-uLP" appends="YES" id="K6z-Xx-LYc"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="Conversation" destination="bbf-Qo-l6E" id="V4B-i2-HNH"/>
@@ -70,6 +74,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ulc-ih-uLP">
+                    <connections>
+                        <action selector="tapHandler:" destination="vXZ-lx-hvc" id="pQ0-6n-K5t"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="260" y="338"/>
         </scene>

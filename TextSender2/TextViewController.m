@@ -114,6 +114,11 @@
             break;
     } 
 }
+- (IBAction)tapHandler:(id)sender {
+    [_message resignFirstResponder];
+    [_phoneNumber resignFirstResponder];
+    [_Conversation resignFirstResponder];
+}
 
 
 

@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "TextViewController.h"
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -25,6 +25,7 @@
     [Parse setApplicationId:@"6HgpgpIjwBbM97Qdex0wwm1IQzA7ZRPvXH2lSfEc"
                   clientKey:@"O0a50m0cbupZwuXXp1UH3qtujG0Ct3vVZOyN1bFf"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 
@@ -48,6 +49,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 @end
