@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  TextSender2
+//  TextingView
 //
-//  Created by Sandeep  Raghunandhan on 2/12/15.
+//  Created by Sandeep  Raghunandhan on 2/8/15.
 //  Copyright (c) 2015 Sandeep. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import <Parse/Parse.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"HH93ApFAaBOmhpY3O3BgSfrgxyLy5Fg2d7zwd8An"
+                  clientKey:@"tj6cb2ATFEtCvewMXAmmVwkTXPErTF8BPAcHT633"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 
