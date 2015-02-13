@@ -27,7 +27,7 @@
     [super viewDidLoad];
     if (_objectId)
     {
-        // Retriving code
+        // Retriving code, if there's already a saved conversation
         PFQuery *query = [PFQuery queryWithClassName:@"Conversation"];
         [query getObjectInBackgroundWithId:_objectId block:^(PFObject *conversation, NSError *error) {
             // Do something with the returned PFObject
@@ -36,6 +36,7 @@
     }
     else
     {
+        // Initialize an empty text field
         _conversationText = [[NSMutableString alloc]init];
     }
 }
@@ -87,6 +88,8 @@
 }
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
+    // Tasks to manage once default iPhone messaging app is launched
+    
     switch (result) {
         case MessageComposeResultCancelled:
             NSLog(@"Message was cancelled");
